@@ -1,4 +1,5 @@
 # Python ignores
+venv/
 __pycache__/
 *.pyc
 *.pyo
@@ -6,5 +7,5 @@ __pycache__/
 *.swp
 *.swo
 .env
-venv/
+
 
