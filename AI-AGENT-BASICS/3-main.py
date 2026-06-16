@@ -68,34 +68,46 @@ def count_words(text):
     print("Number of words in user input: ", len(text.split()))
 
 
+def reverse_text(text):
+    # reverse text using string slicing
+    print("Reversed Text: ", text[::-1])
+
+
 # convert_to_uppercase("mom")
 # count_words("I am extremely happy!")
 
 
 # Add the Decision Loop
 while True:
-    print("\nDeveloper Assistant:")
-    print("1. Github User Lookup")
-    print("2. Uppercase Text")
-    print("3. Count Words")
-    print("4. Exit")
+    print(
+        "\nUse the following commands to perform an action: 'github', 'uppercase', 'count', 'reverse', 'exit'"
+    )
+    print("\ngithub - Github User Lookup")
+    print("uppercase - Transform text to Uppercase")
+    print("count - Count Words")
+    print("reverse -  Reverse Text")
+    print("exit - Exit")
 
-    option = input("Choose an option: ")
+    command = input("\nChoose a command: ")
 
-    if option == "1":
+    if command == "github":
         userName = input("Enter Github User Name: ")
 
         get_github_user_info(userName)
 
-    elif option == "2":
+    elif command == "uppercase":
         text = input("Enter text: ")
         convert_to_uppercase(text)
 
-    elif option == "3":
+    elif command == "count":
         text = input("Enter text: ")
         count_words(text)
 
-    elif option == "4":
+    elif command == "reverse":
+        text = input("Enter your text: ")
+        reverse_text(text)
+
+    elif command == "exit":
         print("Adios!")
         break
 
